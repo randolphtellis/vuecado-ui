@@ -24,10 +24,10 @@ yarn add vuecado-ui
 ```ts
 import { createApp } from 'vue'
 import App from './App.vue'
-import VuePdf from 'vuecado-ui'
+import VuecadoUi from 'vuecado-ui'
 
 const app = createApp(App)
-app.use(VuePdf)
+app.use(VuecadoUi)
 app.mount('#app')
 ```
 
@@ -38,10 +38,10 @@ app.mount('#app')
 ```ts
 <script>
 import { defineComponent } from 'vue'
-import { VuePdf } from 'vuecado-ui/esm'
+import { VcButton } from 'vuecado-ui/esm'
 
 export default defineComponent({
-  components: { VuePdf }
+  components: { VcButton }
 })
 </script>
 ```
