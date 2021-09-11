@@ -1,3 +1,3 @@
 export const singleSource = `
-<VcButton v-bind="$props" />
+<VcButton v-bind="$props"/>
 `;
