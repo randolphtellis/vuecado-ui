@@ -1,1 +1,1 @@
-export * from './vue-pdf'
+export * from './button'

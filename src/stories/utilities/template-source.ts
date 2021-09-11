@@ -1,15 +1,19 @@
 export const templateSourceCode = (templateSource, args, replacing = 'v-bind="$props"') => {
+  
+  const attributeLength = args.length
+  const breakLines = attributeLength && attributeLength.length > 4 ? `\n` : ' '
+  
   const propToSource = (key, val) => {
     const type = typeof val;
     switch (type) {
       case 'object':
-        return `:${key}="${JSON.stringify(val)}"\n`;
+        return `:${key}="${JSON.stringify(val)}"${breakLines}`;
       case 'boolean':
-        return val ? key + `\n` : '';
+        return val ? key + `${breakLines}` : '';
       case 'string':
-        return `${key}="${val}"\n`;
+        return `${key}="${val}"${breakLines}`;
       default:
-        return `:${key}="${val}"\n`;
+        return `:${key}="${val}"${breakLines}`;
     }
   };
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent } from 'vue'
 
 export interface ButtonPropsType {
   label?: string;
